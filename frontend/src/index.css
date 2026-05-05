@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light, docs-site aesthetic. Subtle background tint, smooth scrollbars, snappy focus rings. */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #fafafa;        /* slate-50 with a touch warmer */
+  color: #0f172a;                   /* slate-900 */
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Make markdown citations [chunk_id] visually distinct without being noisy. */
+.citation-link {
+  display: inline-block;
+  padding: 1px 6px;
+  margin: 0 1px;
+  font-size: 0.8em;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  color: #4338ca;                   /* indigo-700 */
+  background-color: #eef2ff;        /* indigo-50 */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 120ms;
+}
+
+.citation-link:hover {
+  background-color: #e0e7ff;        /* indigo-100 */
+}

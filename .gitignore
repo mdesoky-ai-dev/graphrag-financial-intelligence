@@ -1,0 +1,52 @@
+# ---------- Secrets — NEVER COMMIT ----------
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+
+# ---------- Python ----------
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg
+
+# ---------- Data — large files + copyrighted corpus ----------
+data/10ks/
+data/processed/
+data/eval/
+
+# ---------- Frontend ----------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+*.local
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Logs ----------
+*.log
+logs/
+
+# ---------- Jupyter / exploration ----------
+.ipynb_checkpoints/
+*.ipynb
