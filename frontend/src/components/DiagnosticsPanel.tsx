@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { ChevronDown, ChevronRight, Database, Search, GitMerge, Layers } from 'lucide-react';
 import type { AskResponse, FusedChunkInfo } from '../types/api';
 
@@ -97,7 +97,7 @@ function StatCard({
   secondary,
   accent,
 }: {
-  icon: JSX.Element;
+  icon: ReactNode;
   label: string;
   primary: string;
   secondary: string;

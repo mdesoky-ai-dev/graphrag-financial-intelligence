@@ -1,5 +1,6 @@
 import { Sparkles, Send, Loader2 } from 'lucide-react';
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 
 interface QueryBoxProps {
   onSubmit: (question: string) => void;
