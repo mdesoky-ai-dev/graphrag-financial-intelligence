@@ -19,6 +19,7 @@ Design notes:
 from __future__ import annotations
 
 import logging
+import os
 from contextlib import asynccontextmanager
 from typing import Any
 
@@ -87,8 +88,12 @@ ALLOWED_ORIGINS = [
     "http://localhost:3000",      # alternate dev port
     "http://127.0.0.1:5173",
     # Add the deployed Netlify URL once it exists, e.g.:
-    #   "https://graphrag-financial.netlify.app",
+    #"https://graphrag-financial-intelligence.netlify.app",
 ]
+
+extra = os.getenv("FRONTEND_ORIGIN", "").strip()
+if extra:
+    ALLOWED_ORIGINS.append(extra.rstrip("/"))  
 
 app.add_middleware(
     CORSMiddleware,
