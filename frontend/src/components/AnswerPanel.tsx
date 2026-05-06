@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Clock, FileText } from 'lucide-react';
 import type { AskResponse } from '../types/api';
+import type { ReactNode } from 'react';
 
 interface AnswerPanelProps {
   result: AskResponse;
@@ -17,7 +18,7 @@ interface AnswerPanelProps {
 const CITATION_REGEX = /\[(apple-10k-fy25_chunk_\d{4})\]/g;
 
 function renderTextWithCitations(text: string) {
-  const parts: (string | JSX.Element)[] = [];
+  const parts: (string | ReactNode)[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
